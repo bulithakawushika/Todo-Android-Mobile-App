@@ -25,6 +25,9 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 
+/**
+ * A fragment representing the Home screen of the to-do application.
+ */
 class HomeFragment : Fragment(), AddTodoPopupFragment.DialogNextBtnClickListener,
     ToDoAdapter.ToDoAdapterClicksInterface {
 
@@ -51,6 +54,10 @@ class HomeFragment : Fragment(), AddTodoPopupFragment.DialogNextBtnClickListener
         getDataFromFirebase()
         registerEvents()
     }
+
+    /**
+     * Register click events for UI components.
+     */
     private fun registerEvents(){
         binding.addBtnHome.setOnClickListener {
             if (popUpFragment != null)
@@ -64,6 +71,9 @@ class HomeFragment : Fragment(), AddTodoPopupFragment.DialogNextBtnClickListener
         }
     }
 
+    /**
+     * Initialize the fragment and set up required components.
+     */
     private fun init (view: View) {
         navController= Navigation.findNavController(view)
         auth = FirebaseAuth.getInstance()
@@ -77,6 +87,9 @@ class HomeFragment : Fragment(), AddTodoPopupFragment.DialogNextBtnClickListener
         binding.recyclerView.adapter = adapter
     }
 
+    /**
+     * Retrieve data from Firebase and populate the to-do list.
+     */
     private fun getDataFromFirebase(){
         databaseRef.addValueEventListener(object :ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
@@ -126,6 +139,7 @@ class HomeFragment : Fragment(), AddTodoPopupFragment.DialogNextBtnClickListener
         }
     }
 
+    //Delete Task Button Function
     override fun onDeleteTaskBtnClick(toDoData: ToDoData) {
         databaseRef.child(toDoData.taskId).removeValue().addOnCompleteListener{
             if (it.isSuccessful){
@@ -136,6 +150,7 @@ class HomeFragment : Fragment(), AddTodoPopupFragment.DialogNextBtnClickListener
         }
     }
 
+    //Edit Task Button Function
     override fun onEditTaskBtnClick(toDoData: ToDoData) {
         if (popUpFragment != null)
             childFragmentManager.beginTransaction().remove(popUpFragment!!).commit()

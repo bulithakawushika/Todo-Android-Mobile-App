@@ -15,6 +15,9 @@ import com.example.todoapplication.databinding.FragmentSignUpBinding
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.FirebaseAuth
 
+/**
+ * A fragment responsible for handling user sign-in.
+ */
 class SignInFragment : Fragment() {
 
     private lateinit var auth: FirebaseAuth

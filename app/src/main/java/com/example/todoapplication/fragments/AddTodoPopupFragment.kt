@@ -14,18 +14,30 @@ import com.example.todoapplication.utills.ToDoData
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.material.textfield.TextInputEditText
 
+/**
+ * A [DialogFragment] subclass that allows the user to add or edit a to-do task.
+ */
 class AddTodoPopupFragment : DialogFragment() {
 
     private lateinit var binding: FragmentAddTodoPopupBinding
     private lateinit var listener: DialogNextBtnClickListener
     private var toDoData : ToDoData? = null
 
+    /**
+     * Sets the [DialogNextBtnClickListener] listener for this fragment.
+     */
     fun setListener(listener: DialogNextBtnClickListener){
         this.listener = listener
     }
 
     companion object {
         const val TAG = "AddTodoPopupFragment"
+
+        /**
+         * Creates a new instance of [AddTodoPopupFragment] with task details.
+         * @param taskId The ID of the task.
+         * @param task The task description.
+         */
         @JvmStatic
         fun newInstance (taskId: String , task: String) = AddTodoPopupFragment().apply {
             arguments = Bundle().apply {
@@ -75,8 +87,21 @@ class AddTodoPopupFragment : DialogFragment() {
         }
     }
 
+    /**
+     * Interface for handling the save and update actions of a to-do task.
+     */
     interface DialogNextBtnClickListener {
+        /**
+         * Called when the user wants to save a new to-do task.
+         * @param todo The task description to be saved.
+         * @param todoEt The input field for the task description.
+         */
         fun onSaveTask(todo: String, todoEt: TextInputEditText)
+        /**
+         * Called when the user wants to update an existing to-do task.
+         * @param toDoData The to-do task data to be updated.
+         * @param todoEt The input field for the task description.
+         */
         fun onUpdateTask(toDoData: ToDoData, todoEt: TextInputEditText)
     }
 

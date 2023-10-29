@@ -14,6 +14,9 @@ import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.FirebaseAuth
 import java.security.AuthProvider
 
+/**
+ * A simple [Fragment] subclass for user sign-up.
+ */
 class SignUpFragment : Fragment() {
 
     private lateinit var auth: FirebaseAuth
@@ -34,6 +37,10 @@ class SignUpFragment : Fragment() {
         init(view)
         registerEvents()
     }
+
+    /**
+     * Initialize the [auth] and [navControl] properties.
+     */
     private fun init(view: View){
         navControl = Navigation.findNavController(view)
         auth = FirebaseAuth.getInstance()
