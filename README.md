@@ -1,6 +1,8 @@
 # Android Todo Application
 
 This Android Todo application is developed using Kotlin language and utilizes Firebase Realtime Database for data storage and Firebase Authentication for user authentication.
+Develop according to Kotlin official style guidelines.
+<a href="https://developer.android.com/kotlin/style-guide">Kotlin official style guidelines</a>
 
 ## Features
 
