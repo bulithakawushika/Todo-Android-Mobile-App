@@ -29,8 +29,7 @@ This Android Todo application is developed using Kotlin language and utilizes Fi
 
 ## Screenshots
 
-![Todo App Screenshot](https://github.com/bulithakawushika/Todo-Android-Mobile-App/blob/master/Android%20Images/Screenshot%202024-04-09%20101850.png?raw=true)
-
+<img src="https://github.com/bulithakawushika/Todo-Android-Mobile-App/blob/master/Android%20Images/Screenshot%202024-04-09%20101850.png?raw=true" alt="Alt text" width="300" height="200">
 
 ## Contributions
 
@@ -38,4 +37,4 @@ Contributions are welcome! If you find any issues or have suggestions for improv
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+Free and Open Source
