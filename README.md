@@ -29,8 +29,7 @@ This Android Todo application is developed using Kotlin language and utilizes Fi
 
 ## Screenshots
 
-<img src="https://github.com/bulithakawushika/Todo-Android-Mobile-App/blob/master/Android%20Images/1.png?raw=true" alt="Alt text" width="550" >
-<img src="https://github.com/bulithakawushika/Todo-Android-Mobile-App/blob/master/Android%20Images/2.png?raw=true" alt="Alt text" width="550" >
+<img src="https://github.com/bulithakawushika/Todo-Android-Mobile-App/blob/master/Image.jpg?raw=true" alt="Alt text" width="1000" >
 
 ## Contributions
 
